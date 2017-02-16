@@ -13,7 +13,7 @@ There are two ways to address a property:
 ## Usage
 
 ```javascript
-dd = require("do-deep")
+var dd = require("do-deep")
 
 var someObject = {} // you probably want some data here, but do-deep can live without
 var nestedValue = dd.get(someObject, "a.a.a")
@@ -28,8 +28,9 @@ dd.set(nextLetter, "a", "b")
 
 ```
 
-There's also `increment`, `decrement`, 
-`dd.increment(object, "c.c", 2)` increases the value in "c.c" by 2
+There's also `increment`, `decrement`.
+
+`dd.increment(object, "c.c", 2)` increases the value in `object.c.c` by `2`.
 
 ## License
 
