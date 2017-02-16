@@ -3,8 +3,8 @@
 Functions to access properties of nested objects.
 Reading and modifying values work very similar to what how things normally work.
 Things work differently if a property along the path does not exist:
-- `dd.return` will return `undefined`
-- `dd.assign` will create objects so that the final property can be assigned to
+- `dd.get` will return `undefined`
+- `dd.set` will create the objects it needs to assign the value to the final property
 
 There are two ways to address a property:
 1. By a string, similar to what you'd write in JavaScript. Here, camel-casing is enforced
@@ -16,20 +16,20 @@ There are two ways to address a property:
 dd = require("do-deep")
 
 var someObject = {} // you probably want some data here, but do-deep can live without
-var nestedValue = dd.return("a.a.a")
-var otherNestedValue = dd.return(["b"]["b"]["b"])
+var nestedValue = dd.get(someObject, "a.a.a")
+var otherNestedValue = dd.get(someObject, ["b"]["b"]["b"])
 
-dd.assign(someObject, "a.b.b", "c") 
+dd.set(someObject, "a.b.b", "c") 
 // returns 3, because 3 properties were changed (two objects created, one string assigned)
 
 var nextLetter = {"a":"b"}
-dd.assign(someObject, "a", "b") 
+dd.set(someObject, "a", "b") 
 // returns 0, to inform that no change was made to the object at all.
 
 ```
 
-There's also `increment`, `decrement`, `add`, `substract`.
-`dd.increment(object, "c.c")` is a different way of writing `dd.add(object, "c.c", 1)` 
+There's also `increment`, `decrement`, 
+`dd.increment(object, "c.c", 2)` increases the value in "c.c" by 2
 
 ## License
 
