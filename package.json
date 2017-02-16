@@ -1,6 +1,6 @@
 {
   "name": "do-deep",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Braveg1rl <braveg1rl@outlook.com>",
   "description": "Functions to access properties of nested objects",
   "keywords": [],
