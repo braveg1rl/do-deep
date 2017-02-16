@@ -23,7 +23,7 @@ dd.set(someObject, "a.b.b", "c")
 // returns 3, because 3 properties were changed (two objects created, one string assigned)
 
 var nextLetter = {"a":"b"}
-dd.set(someObject, "a", "b") 
+dd.set(nextLetter, "a", "b") 
 // returns 0, to inform that no change was made to the object at all.
 
 ```
