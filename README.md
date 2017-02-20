@@ -1,5 +1,7 @@
 # do-deep [![Build Status](https://travis-ci.org/braveg1rl/do-deep.png?branch=master)](https://travis-ci.org/braveg1rl/do-deep) [![Dependency Status](https://david-dm.org/braveg1rl/do-deep.png)](https://david-dm.org/braveg1rl/do-deep)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/braveg1rl/do-deep.svg)](https://greenkeeper.io/)
+
 Functions to access properties of nested objects.
 Reading and modifying values work very similar to what how things normally work.
 Things work differently if a property along the path does not exist:
